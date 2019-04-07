@@ -1,4 +1,3 @@
-#!/home/bdoil/workspace/git/testdriven-app/services/users/env/bin python3
 #services/users/manage.py
 
 from flask.cli import FlaskGroup
