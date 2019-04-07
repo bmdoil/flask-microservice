@@ -5,8 +5,8 @@ import os
 class BaseConfig:
     """Base configuration"""
     TESTING = False
-    SQLALCHEMY_TRACK_NOTIFICATIONS = False
     SECRET_KEY = 'supersecretkey'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 class DevelopmentConfig(BaseConfig):
     """Development configuration"""
