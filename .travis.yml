@@ -1,5 +1,3 @@
-language: python
-
 sudo: required
 
 services:
@@ -14,12 +12,12 @@ before_install:
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
 
-  before_script:
-    - docker-compose -f docker-compose-dev.yml up --build -d
+before_script:
+  - docker-compose -f docker-compose-dev.yml up --build -d
 
-  script:
-    - docker-compose -f docker-compose-dev.yml exec users python manage.py test
-    - docker-compose -f docker-compose-dev.yml exec users flake8 project
+script:
+  - docker-compose -f docker-compose-dev.yml exec users python manage.py test
+  - docker-compose -f docker-compose-dev.yml exec users flake8 project
   
-  after_script:
-    - docker-compose -f docker-compose-dev.yml down
+after_script:
+  - docker-compose -f docker-compose-dev.yml down
