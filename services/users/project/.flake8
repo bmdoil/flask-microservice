@@ -1,0 +1,5 @@
+[flake8]
+max-line-length = 80
+ignore = E501, E251
+select = C,E,F,W,B,B950
+exclude=env
